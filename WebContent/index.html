@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Hamma's Online Shop</title>
+<style>
+img {
+	width: 20%;
+	height: 50%;
+}
+</style>
+<script>
+function myFunction() {
+    var chklist = document.getElementsByName("Bestellung");
+		for (i= 0; i< chklist.length; i++) {
+			chklist[i].removeAttribute("disabled");
+		}
+}
+</script>
+</head>
+<body>
+	<img src="http://www.digibin.de/img/kunden/hamma_logo.png" alt="Logo"
+		width="460" height="345">
+	<form action="http://localhost:9999/Online_Shop/OnlineShop"
+		method="post">
+		Vorname und Nachname:<br> <input type="text" name="Name" value="" onkeyup="myFunction()"><br>
+
+		<h2 style="font-family: verdana;">Wilkommen im Online-Shop der
+			B&auml;ckerei Hamma</h2>
+		<p style="font-family: helvetica;">Hier finden sie alles, was sie
+			brauchen, 3 oder 4 &euro; teurer</p>
+		<h3 style="font-family: verdana;">Unser Men&uuml;</h3>
+
+		<table style="width: 100%" cellspacing="15">
+			<tr>
+				<th>Produkt</th>
+				<th></th>
+				<th>Preis in &euro;</th>
+			</tr>
+			<tr>
+				<td>Kaffee</td>
+				<td>&nbsp;</td>
+				<td>1,95&euro;</td>
+				<td><label> <input type="checkbox" name="Bestellung"
+						value="Kaffee" disabled>
+				</label></td>
+			</tr>
+			<tr>
+				<td>Brezel</td>
+				<td>&nbsp;</td>
+				<td>0,69&euro;</td>
+				<td><label> <input type="checkbox" name="Bestellung"
+						value="Brezel" disabled>
+				</label></td>
+			</tr>
+			<tr>
+				<td>Butterbrezel</td>
+				<td>&nbsp;</td>
+				<td>1,30&euro;</td>
+				<td><label> <input type="checkbox" name="Bestellung"
+						value="Butterbrezel" disabled>
+				</label></td>
+			</tr>
+			<tr>
+				<td>Leberk&auml;swecken</td>
+				<td>&nbsp;</td>
+				<td>5&euro;</td>	
+				<td><label> <input type="checkbox" name="Bestellung"
+						value="Leberk&auml;swecken" disabled>
+				</label></td>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<button>Jetzt bestellen</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
